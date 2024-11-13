@@ -4,8 +4,8 @@ import "../styles/globals.scss";
 import Header from "@/components/header/header";
 
 export const metadata: Metadata = {
-  title: "HD Solution",
-  description: "A solution project for the HD Experience Developer test.",
+  title: "W.",
+  description: "W. - A solution project for the HD Experience Developer test.",
 };
 
 export default function RootLayout({
