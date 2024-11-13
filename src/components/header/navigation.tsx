@@ -39,10 +39,12 @@ const Navigation: FunctionComponent<INavProps> = ({props}) => {
     return (
         <div className={styles.container}>
             <div className={styles.logo}>
-                <Image 
-                    src={Logo}
-                    alt='Logo'
-                ></Image>
+                <Link href="/">
+                    <Image 
+                        src={Logo}
+                        alt='Logo'
+                    ></Image>
+                </Link>
             </div>
             <div className={`${styles.nav} ${isBurgerOpen && styles.open}`}>
                 {nav.map((item: INavItem ,i: Key) => {
@@ -57,6 +59,7 @@ const Navigation: FunctionComponent<INavProps> = ({props}) => {
                 { !isBurgerOpen && <Image src={Menu} alt='Open Menu' /> }
                 { isBurgerOpen && <Image src={MenuClose} alt='Close Menu' /> }
             </div>
+            <div className={`${styles.backdrop} ${isBurgerOpen && styles.open}`} onClick={() => ToggleHamburger()}></div>
         </div>
     )
 }
