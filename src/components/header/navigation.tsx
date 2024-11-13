@@ -46,7 +46,7 @@ const Navigation: FunctionComponent<INavProps> = ({props}) => {
                     ></Image>
                 </Link>
             </div>
-            <div className={`${styles.nav} ${isBurgerOpen && styles.open}`}>
+            <nav className={`${styles.nav} ${isBurgerOpen && styles.open}`}>
                 {nav.map((item: INavItem ,i: Key) => {
                     return (
                         <Link key={i} href={item.url} className={styles.link}>
@@ -54,7 +54,7 @@ const Navigation: FunctionComponent<INavProps> = ({props}) => {
                         </Link>
                     )
                 })}
-            </div>
+            </nav>
             <div className={styles.hamburger} onClick={() => ToggleHamburger()}>
                 { !isBurgerOpen && <Image src={Menu} alt='Open Menu' /> }
                 { isBurgerOpen && <Image src={MenuClose} alt='Close Menu' /> }
