@@ -28,6 +28,8 @@
         z-index: 10;
     }
     .backdrop {
+        user-select: none;
+        pointer-events: none;
         position: fixed;
         width: 100vw;
         height: 100vh;
@@ -35,7 +37,7 @@
         left: 0;
         background-color: var(--neutral-blue-dark);
         opacity: 0;
-        z-index: -1;
+        z-index: 6;
         transition: opacity 0.5s ease-in-out;
     }
 }
@@ -68,7 +70,8 @@
         }
         .backdrop {
             &.open {
-                z-index: 6;
+                user-select: unset;
+                pointer-events: unset;
                 opacity: 0.5;
             }
         }

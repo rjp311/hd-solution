@@ -1,7 +1,47 @@
+@use '../styles/variables.scss' as v;
+
+// 404 Page
 .sorry {
-  color: var(--neutral-blue-mid);
   padding: 0.5rem 0;
-  text-align: center;
   border-top: 1px solid var(--neutral-blue);
   border-bottom: 1px solid var(--neutral-blue);
+}
+
+// Main Page
+
+.top {
+  display: flex;
+}
+
+.hero {
+  width: calc(100% * (2/3));
+}
+
+.sidebar {
+  width: calc(100% * (1/3));
+}
+
+@media screen and (max-width: v.$breakpoint-tablet) {
+  .hero {
+    width: calc(100% * (3/5));
+  }
+
+  .sidebar {
+    width: calc(100% * (2/5));
+  }
+}
+
+@media screen and (max-width: v.$breakpoint-handheld) {
+  .top {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
 }

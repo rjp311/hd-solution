@@ -1,0 +1,46 @@
+@use '../../styles/variables.scss' as v;
+
+.sidebar {
+    height: auto;
+    padding: 1.5rem;
+    color: var(--neutral-white);
+    background-color: var(--neutral-blue-dark);
+    overflow: hidden;
+    h2 {
+        margin: 0.5rem 0 0.5rem 0;
+        font-size: 2em;
+        color: var(--primary-orange);
+    }
+    .list {
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+        overflow-y: auto;
+        .article {
+            padding: 1rem 0;
+            border-bottom: 0.5px solid var(--neutral-blue-mid);
+            h4 {
+                margin: 0 0 0.5rem 0;
+                font-size: 1.1em;
+                color: var(--neutral-white);
+            }
+            small {
+                display: -webkit-box;
+                max-width: 100%;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                line-height: 1.5em;
+                color: var(--neutral-blue);
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            &:hover {
+                h4 {
+                    color: var(--primary-orange);
+                }
+            }
+        }
+    }
+}
