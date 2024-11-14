@@ -12,7 +12,7 @@ import Menu from '../../assets/icon-menu.svg';
 import MenuClose from '../../assets/icon-menu-close.svg';
 
 interface INavItem {
-    name: String,
+    name: string,
     url: URL,
 }
 
@@ -47,6 +47,9 @@ const Navigation: FunctionComponent<INavProps> = ({props}) => {
                 </Link>
             </div>
             <nav className={`${styles.nav} ${isBurgerOpen && styles.open}`}>
+                <div className={styles.closer} onClick={() => ToggleHamburger()}>
+                    <Image src={MenuClose} alt='Close Menu'/>
+                </div>
                 {nav.map((item: INavItem ,i: Key) => {
                     return (
                         <Link key={i} href={item.url} className={styles.link}>
@@ -55,9 +58,8 @@ const Navigation: FunctionComponent<INavProps> = ({props}) => {
                     )
                 })}
             </nav>
-            <div className={styles.hamburger} onClick={() => ToggleHamburger()}>
-                { !isBurgerOpen && <Image src={Menu} alt='Open Menu' /> }
-                { isBurgerOpen && <Image src={MenuClose} alt='Close Menu' /> }
+            <div className={styles.opener} onClick={() => ToggleHamburger()}>
+                <Image src={Menu} alt='Open Menu' />
             </div>
             <div className={`${styles.backdrop} ${isBurgerOpen && styles.open}`} onClick={() => ToggleHamburger()}></div>
         </div>

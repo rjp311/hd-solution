@@ -23,9 +23,15 @@
             }
         }
     }
-    .hamburger {
+    .opener {
         display: none;
-        z-index: 10;
+    }
+    .closer {
+        display: none;
+        justify-content: flex-end;
+        align-items: center;
+        height: 38px;
+        margin: 0 0 3rem 0;
     }
     .backdrop {
         user-select: none;
@@ -48,14 +54,13 @@
             display: flex;
             position: fixed;
             flex-direction: column;
-            justify-content: center;
             gap: 0.5rem;
             top: 0;
             right: calc(100% * (2/3) * -1);
             width: calc(100% * (2/3));
             max-width: 320px;
             height: 100vh;
-            padding: 0 2rem 25vh 2rem;
+            padding: 5rem 4rem 25vh 2rem;
             background-color: var(--neutral-white);
             font-size: 2em;
             transition: right 0.5s ease-in-out;
@@ -64,9 +69,12 @@
                 right: 0;
             }
         }
-        .hamburger {
+        .opener {
             cursor: pointer;
             display: block;
+        }
+        .closer {
+            display: flex;
         }
         .backdrop {
             &.open {
@@ -86,6 +94,7 @@
     .container {
         .nav {
             font-size: 1.5em;
+            padding: 2rem 1.5rem 25vh 2rem;
         }
     }
 }
