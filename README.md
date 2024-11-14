@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 1. Install dependencies using ```npm install```
 2. Copy the ```.env.example``` file to ```.env``` or ```.env.local```.
-3. Run the development server.
+3. Run the development server using ```npm run dev```.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
